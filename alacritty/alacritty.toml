@@ -1,4 +1,3 @@
-[shell]
-program = "wsl.exe"
-args = ["--cd", "~"]
+shell.program = "wsl.exe"
+shell.args = ["--cd", "~"]
 
