@@ -8,7 +8,8 @@ A collection of configurations for my systems
 - make 
 - zsh
 - neofetch
-- nvim
+- neovim
+    * if not using pacman, checkout [neovim's install instructions](https://github.com/neovim/neovim/blob/master/INSTALL.md#linux), because apt doesn't install latest version???
 
 ## Setup
 - clone repo to $HOME/.config
