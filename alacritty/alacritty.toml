@@ -1,2 +1,4 @@
-shell = "wsl.exe"
+[shell]
+program = "wsl.exe"
+args = ["--cd", "~"]
 
