@@ -1,12 +1,20 @@
+# colored output
+alias ls="ls --color=auto"
+alias tree="tree -C"
+alias pacman="pacman --color auto"
+
+# zdotdir
 alias cdz="cd $ZDOTDIR"
 alias srcz="clear && source $ZDOTDIR/.zshrc"
-alias ls="ls --color=auto"
-alias l="ls -hAl"
+
+# git
 alias gits="git status"
 alias gitd="git diff"
+
+# misc
+alias l="ls -hAl"
 alias clip="xclip -r -selection c"
 alias nv="nvim"
-alias pacman="pacman --color auto"
 
 # windows only
 alias cdw="cd /mnt/c/Users/bbdnet2840/"
