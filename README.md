@@ -23,7 +23,10 @@ A collection of configurations for my systems
 - add `ZDOTDIR=~/.config/zsh` to /etc/zsh/zshenv (create if doesn't exist)
 
 ## Windows config
-- copy alacritty/ to %APPDATA%/alacritty/
+- alacritty
+    * `cd $HOME/.config/alacritty`
+    * `./alacopy2win.sh <username>` with your windows username
+    * see `./alacopy2win.sh -h` for more info
 
 ## TODO
 - find a way to symlink %APPDATA%/alacritty/ to alacritty/
