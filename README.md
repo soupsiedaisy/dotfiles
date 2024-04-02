@@ -8,6 +8,7 @@ A collection of configurations for my systems
 - make 
 - zsh
 - neofetch
+- tree
 - neovim
     * if not using pacman, checkout [neovim's install instructions](https://github.com/neovim/neovim/blob/master/INSTALL.md#linux), because apt doesn't install latest version???
 - ripgrep (telescope dep)
@@ -30,3 +31,9 @@ A collection of configurations for my systems
 
 ## TODO
 - find a way to symlink %APPDATA%/alacritty/ to alacritty/
+- separate windows config from unix config
+- remove nvim.old after grabbing wanted config
+- create a global colors file
+    * automation :3
+- uhhh, refine this doc???
+
