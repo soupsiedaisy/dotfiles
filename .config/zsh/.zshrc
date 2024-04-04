@@ -144,6 +144,10 @@ unsetopt BEEP
 # remove hightlight on pastes
 zle_highlight=('paste:none')
 
+# path update
+path+=("$HOME/.local/bin")
+export PATH
+
 # This loads nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

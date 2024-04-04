@@ -30,5 +30,3 @@ vim.g.netrw_liststyle = 3
 
 vim.opt.mouse = 'a'
 
-vim.opt.clipboard = 'unnamedplus'
-
