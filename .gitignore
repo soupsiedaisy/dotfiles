@@ -5,6 +5,7 @@
 !/.config/zsh
 !/.config/nvim
 !/.config/alacritty
+!/.local/bin
 
 # But also
 /.config/zsh/.zcompdump
