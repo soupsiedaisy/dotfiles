@@ -10,10 +10,3 @@
 /.config/zsh/.zcompdump
 /.config/nvim/lazy-lock.json
 
-# temp, for repo refactor
-!/zsh
-!/nvim*
-!/alacritty
-/zsh/.zcompdump
-/nvim/lazy-lock.json
-
