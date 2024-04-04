@@ -1,138 +1,51 @@
 [shell]
-program = "wsl.exe"
-args = ["--cd", "~"]
+    # TODO unix things
+    program = "wsl.exe"
+    args = ["--cd", "~"]
 
 [window]
-title = "Hello Soup!"
+    title = "Hello Soup!"
 
-# COLORS
-# This section documents the [colors] table of the configuration file.
-# Colors are specified using their hexadecimal values with a # prefix: #RRGGBB.
-
-# primary
-    # This section documents the [colors.primary] table of the configuration file.
-    # foreground = "<string>"
+[colors.primary]
+    foreground = "#abb2bf"
     # Default: "#d8d8d8"
-    # background = "<string>"
+    background = "#282c34"
     # Default: "#181818"
-    # dim_foreground = "<string>"
-    # If this is not set, the color is automatically calculated based on the foreground color.
-    # Default: "#828482"
-    # bright_foreground = "<string>"
-    # This color is only used when draw_bold_text_with_bright_colors is true.
-    # If this is not set, the normal foreground will be used.
-    # Default: "None"
 
-# cursor = { text = "<string>", cursor = "<string>" }
-    # Colors which should be used to draw the terminal cursor.
-    # Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
-    # Default: { text = "CellBackground", cursor = "CellForeground" }
-
-# vi_mode_cursor = { text = "<string>", cursor = "<string>" }
-    # Colors for the cursor when the vi mode is active.
-    # Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
-    # Default: { text = "CellBackground", cursor = "CellForeground" }
-
-# search
-    # This section documents the [colors.search] table of the configuration.
-    # Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
-    # matches = { foreground = "<string>", background = "<string>" }
-    # Default: { foreground = "#181818", background = "#ac4242" }
-    # focused_match = { foreground = "<string>", background = "<string>" }
-    # Default: { foreground = "#181818", background = "#f4bf75" }
-
-# hints
-    # This section documents the [colors.hints] table of the configuration.
-    # start = { foreground = "<string>", background = "<string>" }
-    # First character in the hint label.
-    # Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
-    # Default: { foreground = "#181818", background = "#f4bf75" }
-    # end = { foreground = "<string>", background = "<string>" }
-    # All characters after the first one in the hint label.
-    # Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
-    # Default: { foreground = "#181818", background = "#ac4242" }
-
-# line_indicator = { foreground = "<string>", background = "<string>" }
-    # Color used for the indicator displaying the position in history during search and vi mode.
-    # Setting this to "None" will use the opposing primary color.
-    # Default: { foreground = "None", background = "None" }
-
-# footer_bar = { foreground = "<string>", background = "<string>" }
-    # Color used for the footer bar on the bottom, used by search regex input, hyperlink URI preview, etc.
-    # Default: { foreground = "#181818", background = "#d8d8d8" }
-
-# selection = { text = "<string>", background = "<string>" }
-    # Colors used for drawing selections.
-    # Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
-    # Default: { text = "CellBackground", background = "CellForeground" }
-
-# normal
-    # This section documents the [colors.normal] table of the configuration.
-    # black = "<string>"
+[colors.normal]
+    black = "#181a1f"
     # Default: "#181818"
-    # red = "<string>"
+    red = "#e86671"
     # Default: "#ac4242"
-    # green = "<string>"
+    green = "#98c379"
     # Default: "#90a959"
-    # yellow = "<string>"
+    yellow = "#e5c07b"
     # Default: "#f4bf75"
-    # blue = "<string>"
+    blue = "#61afef"
     # Default: "#6a9fb5"
-    # magenta = "<string>"
+    magenta = "#c678dd"
     # Default: "#aa759f"
-    # cyan = "<string>"
+    cyan = "#56b6c2"
     # Default: "#75b5aa"
-    # white = "<string>"
+    white = "#abb2bf"
     # Default: "#d8d8d8"
 
-# bright
-    # This section documents the [colors.bright] table of the configuration.
-    # black = "<string>"
-    # Default: "#6b6b6b"
-    # red = "<string>"
-    # Default: "#c55555"
-    # green = "<string>"
-    # Default: "#aac474"
-    # yellow = "<string>"
-    # Default: "#feca88"
-    # blue = "<string>"
-    # Default: "#82b8c8"
-    # magenta = "<string>"
-    # Default: "#c28cb8"
-    # cyan = "<string>"
-    # Default: "#93d3c3"
-    # white = "<string>"
-    # Default: "#f8f8f8"
-
-# dim
-    # This section documents the [colors.dim] table of the configuration.
-    # If the dim colors are not set, they will be calculated automatically based on the normal colors.
-    # black = "<string>"
+# TODO:
+# [colors.dim]
+    # black = "#"
     # Default: "#0f0f0f"
-    # red = "<string>"
+    # red = "#"
     # Default: "#712b2b"
-    # green = "<string>"
+    # green = "#"
     # Default: "#5f6f3a"
-    # yellow = "<string>"
+    # yellow = "#"
     # Default: "#a17e4d"
-    # blue = "<string>"
+    # blue = "#"
     # Default: "#456877"
-    # magenta = "<string>"
+    # magenta = "#"
     # Default: "#704d68"
-    # cyan = "<string>"
+    # cyan = "#"
     # Default: "#4d7770"
-    # white = "<string>"
+    # white = "#"
     # Default: "#8e8e8e"
-
-# indexed_colors = [{ index = <integer>, color = "<string>" },]
-    # The indexed colors include all colors from 16 to 256. When these are not set, they're filled with sensible defaults.
-    # Default: []
-
-# transparent_background_colors = true | false
-    # Whether or not window.opacity applies to all cell backgrounds, or only to the default background. When set to true all cells will be transparent regardless of their background color.
-    # Default: false
-
-# draw_bold_text_with_bright_colors = true | false
-    # When true, bold text is drawn using the bright color variants.
-    # Default: false
 
