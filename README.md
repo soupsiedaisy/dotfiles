@@ -19,6 +19,7 @@ A collection of configurations for my systems
     * `git init`
     * `git remote add origin git@github.com:soupsiedaisy/dotfiles.git`
     * `git pull origin main --allow-unrelated-histories`
+    * `git branch -u origin/main main`
 - init submodules with `git submodule update --init --recursive`
 - add `ZDOTDIR=~/.config/zsh` to `/etc/zsh/zshenv` or `~/.zshenv` (create if doesn't exist)
 
