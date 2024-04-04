@@ -1,5 +1,17 @@
 # Ignore all
 /*
+/*/
+
+# Except
+README.md
+!/.config/
+!/.local/
+
+# But also
+/.config/*
+/.config/*/
+/.local/*
+/.local/*/
 
 # Except
 !/.config/zsh
