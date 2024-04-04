@@ -10,6 +10,7 @@ alias srcz="clear && source $ZDOTDIR/.zshrc"
 # git
 alias gits="git status"
 alias gitd="git diff"
+alias gitg="git log --graph --all"
 
 # misc
 alias l="ls -hAl"
