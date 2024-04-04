@@ -28,5 +28,7 @@ vim.g.localmapleader = " "
 
 vim.g.netrw_liststyle = 3
 
+vim.o.splitright = true
+
 vim.opt.mouse = 'a'
 
