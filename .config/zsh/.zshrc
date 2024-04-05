@@ -75,6 +75,9 @@ LEADING_SYM='☾'
 ZGP_STAGED_SYM='+'
 ZGP_UNSTAGED_SYM='!'
 ZGP_UNTRACKED_SYM='?'
+ZGP_BRANCH_UP_TO_DATE_SYM='≡'
+ZGP_BRANCH_AHEAD_SYM='↑'
+ZGP_BRANCH_BEHIND_SYM='↓'
 
 autoload -Uz add-zsh-hook
 
@@ -83,6 +86,17 @@ gen_git_message () {
 
   if [[ "$ZGP_IS_GIT" == true ]]; then
     GIT_MESSAGE="on $ZGP_BRANCH"
+
+    if [[ $ZGP_STATUS_BRANCH_UP_TO_DATE == true ]]; then
+      GIT_MESSAGE+=" $ZGP_BRANCH_UP_TO_DATE_SYM"
+    else
+      if [[ $ZGP_STATUS_BRANCH_AHEAD -gt 0 ]]; then
+        GIT_MESSAGE+=" $ZGP_BRANCH_AHEAD_SYM$ZGP_STATUS_BRANCH_AHEAD"
+      fi
+      if [[ $ZGP_STATUS_BRANCH_BEHIND -gt 0 ]]; then
+        GIT_MESSAGE+=" $ZGP_BRANCH_BEHIND_SYM$ZGP_STATUS_BRANCH_BEHIND"
+      fi
+    fi
 
     if [[ $ZGP_STATUS_STAGED -ne 0 || $ZGP_STATUS_UNSTAGED -ne 0 || $ZGP_STATUS_UNTRACKED -ne 0 ]]; then
       GIT_MESSAGE+=" |"
