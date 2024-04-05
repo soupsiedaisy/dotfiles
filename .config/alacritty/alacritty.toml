@@ -5,6 +5,7 @@
 
 [window]
     title = "Hello Soup!"
+    dynamic_title = false
 
 [colors.primary]
     foreground = "#abb2bf"
