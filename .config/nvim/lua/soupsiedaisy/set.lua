@@ -32,3 +32,8 @@ vim.o.splitright = true
 
 vim.opt.mouse = 'a'
 
+vim.opt.winminwidth = 10
+vim.opt.winwidth = 30
+
+vim.api.nvim_create_autocmd('TermOpen', { command = 'setlocal nonumber norelativenumber' })
+
