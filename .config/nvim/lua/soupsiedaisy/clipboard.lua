@@ -13,7 +13,7 @@ if in_wsl then
     },
     cache_enabled = true
   }
-  vim.o.clipboard = "unnamed"
+  vim.o.clipboard = ""
 else
   vim.g.clipboard = "unnamedplus"
   vim.o.clipboard = "unnamedplus"
