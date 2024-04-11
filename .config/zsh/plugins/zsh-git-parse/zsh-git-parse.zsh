@@ -9,6 +9,12 @@ declare -ix ZGP_STATUS_UNSTAGED=0
 declare -x ZGP_STATUS_BRANCH_UP_TO_DATE
 declare -ix ZGP_STATUS_BRANCH_AHEAD=0
 declare -ix ZGP_STATUS_BRANCH_BEHIND=0
+declare -x ZGP_STAGED_SYM='+'
+declare -x ZGP_UNSTAGED_SYM='!'
+declare -x ZGP_UNTRACKED_SYM='?'
+declare -x ZGP_BRANCH_UP_TO_DATE_SYM='≡'
+declare -x ZGP_BRANCH_AHEAD_SYM='↑'
+declare -x ZGP_BRANCH_BEHIND_SYM='↓'
 
 # functions (should this be above the declarations?)
 handle_status_branch() {
@@ -70,6 +76,46 @@ if [[ $ZGP_STATUS_BRANCH_AHEAD -eq 0 && $ZGP_STATUS_BRANCH_BEHIND -eq 0 ]]; then
 else
   ZGP_STATUS_BRANCH_UP_TO_DATE=false
 fi
+
+autoload -Uz add-zsh-hook
+
+gen_git_message () {
+  [[ -f $ZDOTDIR/plugins/zsh-git-parse/zsh-git-parse.plugin.zsh ]] && source $ZDOTDIR/plugins/zsh-git-parse/zsh-git-parse.plugin.zsh > /dev/null 2> /dev/null
+
+  if [[ "$ZGP_IS_GIT" == true ]]; then
+    ZGP_PROMPT="on $ZGP_BRANCH"
+
+    if [[ $ZGP_STATUS_BRANCH_UP_TO_DATE == true ]]; then
+      ZGP_PROMPT+=" $ZGP_BRANCH_UP_TO_DATE_SYM"
+    else
+      if [[ $ZGP_STATUS_BRANCH_AHEAD -gt 0 ]]; then
+        ZGP_PROMPT+=" $ZGP_BRANCH_AHEAD_SYM$ZGP_STATUS_BRANCH_AHEAD"
+      fi
+      if [[ $ZGP_STATUS_BRANCH_BEHIND -gt 0 ]]; then
+        ZGP_PROMPT+=" $ZGP_BRANCH_BEHIND_SYM$ZGP_STATUS_BRANCH_BEHIND"
+      fi
+    fi
+
+    if [[ $ZGP_STATUS_STAGED -ne 0 || $ZGP_STATUS_UNSTAGED -ne 0 || $ZGP_STATUS_UNTRACKED -ne 0 ]]; then
+      ZGP_PROMPT+=" |"
+      if [[ $ZGP_STATUS_STAGED -ne 0 ]]; then
+        ZGP_PROMPT+=" $ZGP_STATUS_STAGED$ZGP_STAGED_SYM"
+      fi
+      if [[ $ZGP_STATUS_UNSTAGED -ne 0 ]]; then
+        ZGP_PROMPT+=" $ZGP_STATUS_UNSTAGED$ZGP_UNSTAGED_SYM"
+      fi
+      if [[ $ZGP_STATUS_UNTRACKED -ne 0 ]]; then
+        ZGP_PROMPT+=" $ZGP_STATUS_UNTRACKED$ZGP_UNTRACKED_SYM"
+      fi
+    fi
+  else
+    ZGP_PROMPT=''
+  fi
+}
+
+add-zsh-hook precmd gen_git_message
+
+setopt prompt_subst
 
 # for debugging purposes
 # echo "is git: $ZGP_IS_GIT"
