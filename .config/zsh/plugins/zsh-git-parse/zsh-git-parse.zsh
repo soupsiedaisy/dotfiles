@@ -138,3 +138,5 @@ setopt prompt_subst
 # manage the vars export and create a default prompt string 
   # get inspo from omz
 
+# TODO add 'no-upstream' sym
+
