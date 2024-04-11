@@ -139,4 +139,5 @@ setopt prompt_subst
   # get inspo from omz
 
 # TODO add 'no-upstream' sym
+  # git rev-parse --abbrev-ref <branch>{upstream}
 
