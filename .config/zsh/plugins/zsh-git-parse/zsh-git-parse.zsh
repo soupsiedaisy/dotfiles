@@ -46,7 +46,7 @@ else
   ZGP_IS_GIT=false
 fi
 
-git rev-parse --abbrev-ref $ZGP_BRANCH{upstream} &> /dev/null
+git rev-parse --abbrev-ref $ZGP_BRANCH@{upstream} &> /dev/null
 if [[ $? -eq 0 ]]; then
   ZGP_BRANCH_HAS_UPSTREAM=true
 else
