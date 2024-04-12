@@ -62,7 +62,7 @@ unset STATUS_RAW
 for STATUS in "${STATUSES[@]}";
 do
   local CODE=$(echo $STATUS | cut -c 1-2)
-  if [[ ZGP_BRANCH_HAS_UPSTREAM == true && $CODE =~ ^##$ ]]; then
+  if [[ $ZGP_BRANCH_HAS_UPSTREAM == true && $CODE =~ ^##$ ]]; then
     handle_status_branch $STATUS
   fi
   if [[ $CODE =~ ^[[:space:]].$ ]]; then
