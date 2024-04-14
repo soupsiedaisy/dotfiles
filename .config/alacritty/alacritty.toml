@@ -1,7 +1,7 @@
-[shell]
+# [shell]
     # TODO unix things
-    program = "wsl.exe"
-    args = ["--cd", "~"]
+    # program = "wsl.exe"
+    # args = ["--cd", "~"]
 
 [window]
     title = "Hello Soup!"
