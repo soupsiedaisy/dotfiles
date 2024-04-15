@@ -70,11 +70,16 @@ fi
 COLOUR_OK='white'
 COLOUR_FAIL='red'
 COLOUR_DULL='008'
+COLOUR_PATH='blue'
 LEADING_SYM='☾' 
 
 # Prompt Definitions
-PS1="%F{$COLOUR_DULL}%~%f %B%(?.%F{$COLOUR_OK}$LEADING_SYM%f.%F{$COLOUR_FAIL}$LEADING_SYM%f)%b "
-RPS1='%F{$COLOUR_DULL}$ZGP_PROMPT%f' # This needs to be single quotes so that the parameters aren't expanded on init
+PROMPT_USER_HOST="%F{$COLOUR_DULL}%n@%m%f"
+PROMPT_PATH="%F{$COLOUR_PATH}%~%f"
+PROMPT_LEADER="%B%(?.%F{$COLOUR_OK}$LEADING_SYM%f.%F{$COLOUR_FAIL}$LEADING_SYM%f)%b"
+
+PS1="$PROMPT_USER_HOST $PROMPT_PATH $PROMPT_LEADER "
+RPS1='%F{$COLOUR_DULL}$ZGP_PROMPT%f' # This needs to be single quotes so that the parameters are expanded on each render
 
 # =================================
 # Misc config
