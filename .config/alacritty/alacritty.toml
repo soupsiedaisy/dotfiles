@@ -1,5 +1,4 @@
 [shell]
-    # TODO unix things
     program = "wsl.exe"
     args = ["--cd", "~"]
 
