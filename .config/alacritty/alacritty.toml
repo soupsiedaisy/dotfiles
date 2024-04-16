@@ -1,8 +1,3 @@
-# [shell]
-    # TODO unix things
-    # program = "wsl.exe"
-    # args = ["--cd", "~"]
-
 [window]
     title = "psst... you look nice today ♥"
     dynamic_title = false
