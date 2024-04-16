@@ -4,8 +4,10 @@
     # args = ["--cd", "~"]
 
 [window]
-    title = "Hello Soup!"
+    title = "psst... you look nice today ♥"
     dynamic_title = false
+    startup_mode = "Maximized"
+    padding = { x = 5, y = 5 }
 
 [colors.primary]
     foreground = "#abb2bf"
