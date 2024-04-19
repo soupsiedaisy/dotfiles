@@ -6,6 +6,7 @@
 [[ -f $ZDOTDIR/zsh_aliases.zsh ]] && source $ZDOTDIR/zsh_aliases.zsh
 [[ -f $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh ]] && source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 [[ -f $ZDOTDIR/plugins/zsh-git-parse/zsh-git-parse.plugin.zsh ]] && source $ZDOTDIR/plugins/zsh-git-parse/zsh-git-parse.plugin.zsh > /dev/null 2> /dev/null
+[[ -f $ZDOTDIR/plugins/zsh-moon-phase/zsh-moon-phase.plugin.zsh ]] && source $ZDOTDIR/plugins/zsh-moon-phase/zsh-moon-phase.plugin.zsh
 
 # =================================
 # Keymaps
@@ -71,12 +72,12 @@ COLOUR_OK='white'
 COLOUR_FAIL='red'
 COLOUR_DULL='008'
 COLOUR_PATH='blue'
-LEADING_SYM='☾' 
+LEADING_SYM=$(echo -e $ZMP_PHASE_SYM)
 
 # Prompt Definitions
 PROMPT_USER_HOST="%F{$COLOUR_DULL}%n@%m%f"
 PROMPT_PATH="%F{$COLOUR_PATH}%~%f"
-PROMPT_LEADER="%B%(?.%F{$COLOUR_OK}$LEADING_SYM%f.%F{$COLOUR_FAIL}$LEADING_SYM%f)%b"
+PROMPT_LEADER="%(?.%F{$COLOUR_OK}$LEADING_SYM%f.%F{$COLOUR_FAIL}$LEADING_SYM%f)"
 
 PS1="$PROMPT_USER_HOST $PROMPT_PATH $PROMPT_LEADER "
 RPS1='%F{$COLOUR_DULL}$ZGP_PROMPT%f' # This needs to be single quotes so that the parameters are expanded on each render
