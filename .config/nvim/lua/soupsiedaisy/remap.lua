@@ -1,5 +1,3 @@
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
-
 -- ALT+{h,j,k,l} to navigate windows
 vim.keymap.set({ "t", "i" }, "<A-h>", "<C-\\><C-N><C-w>h", { noremap = true } )
 vim.keymap.set({ "t", "i" }, "<A-j>", "<C-\\><C-N><C-w>j", { noremap = true } )

@@ -8,6 +8,10 @@
     startup_mode = "Maximized"
     padding = { x = 5, y = 5 }
 
+[font]
+    normal = { family = "Hack Nerd Font", style = "Regular" }
+    builtin_box_drawing = false
+
 [colors.primary]
     foreground = "#abb2bf"
     # Default: "#d8d8d8"
