@@ -4,7 +4,6 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- TODO use that tab plugin from kickstarter
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -37,6 +36,4 @@ vim.opt.mouse = 'a'
 
 vim.opt.winminwidth = 10
 vim.opt.winwidth = 30
-
-vim.api.nvim_create_autocmd('TermOpen', { command = 'setlocal nonumber norelativenumber' })
 
