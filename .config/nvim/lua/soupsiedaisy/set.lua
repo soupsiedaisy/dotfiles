@@ -15,7 +15,7 @@ vim.opt.wrap = false
 
 -- vim.opt.swapfile = false
 -- vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.cache/nvim/undodir"
+vim.opt.undodir = os.getenv('HOME') .. '/.cache/nvim/undodir'
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
@@ -25,8 +25,8 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 4
 
-vim.g.mapleader = " "
-vim.g.localmapleader = " "
+vim.g.mapleader = ' '
+vim.g.localmapleader = ' '
 
 vim.g.netrw_liststyle = 3
 
@@ -36,4 +36,3 @@ vim.opt.mouse = 'a'
 
 vim.opt.winminwidth = 10
 vim.opt.winwidth = 30
-

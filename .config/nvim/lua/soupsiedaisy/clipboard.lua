@@ -1,21 +1,20 @@
 local in_wsl = os.getenv('WSL_DISTRO_NAME') ~= nil
 
 if in_wsl then
-  vim.g.clipboard = {
-    name = 'WslClipboard',
-    copy = {
-      [ '+' ] = 'clip.exe',
-      [ '*' ] = 'clip.exe'
-    },
-    paste = {
-      [ '+' ] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-      [ '*' ] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))'
-    },
-    cache_enabled = true
-  }
-  vim.o.clipboard = ""
+    vim.g.clipboard = {
+        name = 'WslClipboard',
+        copy = {
+            ['+'] = 'clip.exe',
+            ['*'] = 'clip.exe',
+        },
+        paste = {
+            ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+        },
+        cache_enabled = true,
+    }
+    vim.o.clipboard = ''
 else
-  vim.g.clipboard = "unnamedplus"
-  vim.o.clipboard = "unnamedplus"
+    vim.g.clipboard = 'unnamedplus'
+    vim.o.clipboard = 'unnamedplus'
 end
-

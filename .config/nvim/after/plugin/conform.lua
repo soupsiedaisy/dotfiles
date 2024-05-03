@@ -1,21 +1,18 @@
-require('conform').setup {
-  formatters_by_ft = {
-    lua = { "stylua" },
-    javascript = { { "prettierd", "prettier" } },
-  },
-
- -- format_on_save = { timeout_ms = 500, lsp_fallback = true },
-
-  formatters = {
-    shfmt = {
-      prepend_args = { "-i", "2" },
+require('conform').setup({
+    formatters_by_ft = {
+        lua = { 'stylua' },
+        javascript = { { 'prettierd', 'prettier' } },
     },
-  },
-}
 
-vim.keymap.set(
-  'n',
-  "<leader>f",
-  function() require("conform").format({ async = true, lsp_fallback = true }) end,
-  { desc = "Format buffer" }
-)
+    -- format_on_save = { timeout_ms = 500, lsp_fallback = true },
+
+    formatters = {
+        shfmt = {
+            prepend_args = { '-i', '2' },
+        },
+    },
+})
+
+vim.keymap.set('n', '<leader>f', function()
+    require('conform').format({ async = true, lsp_fallback = true })
+end, { desc = 'Format buffer' })

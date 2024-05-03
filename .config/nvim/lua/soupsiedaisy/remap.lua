@@ -13,31 +13,30 @@ vim.keymap.set('n', '<A-l>', '<C-w>l', { noremap = true, desc = 'Go to the right
 vim.keymap.set('n', '<C-`>t', ':tabnew +terminal<CR>', { noremap = true, desc = 'Terminal: new terminal in new tab' })
 vim.keymap.set('n', '<C-`>`', vim.cmd.terminal, { noremap = true, desc = 'Terminal: new terminal in current buffer' })
 vim.keymap.set('n', '<C-`>h', function()
-  local cur = vim.o.splitright
-  vim.o.splitright = false
-  vim.cmd.vsplit()
-  vim.cmd.terminal()
-  vim.o.splitright = cur
+    local cur = vim.o.splitright
+    vim.o.splitright = false
+    vim.cmd.vsplit()
+    vim.cmd.terminal()
+    vim.o.splitright = cur
 end, { noremap = true, desc = 'Terminal: new terminal to the left' })
 vim.keymap.set('n', '<C-`>j', function()
-  local cur = vim.o.splitbelow
-  vim.o.splitbelow = true
-  vim.cmd.split()
-  vim.cmd.terminal()
-  vim.o.splitbelow = cur
+    local cur = vim.o.splitbelow
+    vim.o.splitbelow = true
+    vim.cmd.split()
+    vim.cmd.terminal()
+    vim.o.splitbelow = cur
 end, { noremap = true, desc = 'Terminal: new terminal downwards' })
 vim.keymap.set('n', '<C-`>k', function()
-  local cur = vim.o.splitbelow
-  vim.o.splitbelow = false
-  vim.cmd.split()
-  vim.cmd.terminal()
-  vim.o.splitbelow = cur
+    local cur = vim.o.splitbelow
+    vim.o.splitbelow = false
+    vim.cmd.split()
+    vim.cmd.terminal()
+    vim.o.splitbelow = cur
 end, { noremap = true, desc = 'Terminal: new terminal upwards' })
 vim.keymap.set('n', '<C-`>l', function()
-  local cur = vim.o.splitright
-  vim.o.splitright = true
-  vim.cmd.vsplit()
-  vim.cmd.terminal()
-  vim.o.splitright = cur
+    local cur = vim.o.splitright
+    vim.o.splitright = true
+    vim.cmd.vsplit()
+    vim.cmd.terminal()
+    vim.o.splitright = cur
 end, { noremap = true, desc = 'Terminal: new terminal to the right' })
-
