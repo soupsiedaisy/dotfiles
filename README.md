@@ -3,15 +3,14 @@
 ### Description
 A collection of configurations for my systems
 
-## Prerequisites
-- a c compiler
+## Requirements
 - make 
 - zsh
 - neofetch
 - tree
 - neovim
     * if not using pacman, checkout [neovim's install instructions](https://github.com/neovim/neovim/blob/master/INSTALL.md#linux), because apt doesn't install latest version???
-- ripgrep (telescope dep)
+- neovim plugin deps: cmake, zip, unzip, curl, tar, gzip, ripgrep 
 - a [patched font](https://www.nerdfonts.com/), else icons won't render
 
 ## Setup
@@ -23,6 +22,8 @@ A collection of configurations for my systems
     * `git branch -u origin/main main`
 - init submodules with `git submodule update --init --recursive`
 - add `ZDOTDIR=~/.config/zsh` to `/etc/zsh/zshenv` or `~/.zshenv` (create if doesn't exist)
+- in neovim:
+    * `:Mason install stylua prettier prettierd`
 
 ## Windows config
 - alacritty
