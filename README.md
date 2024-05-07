@@ -13,7 +13,7 @@ A collection of configurations for my systems
 - neovim plugin deps: cmake, zip, unzip, curl, tar, gzip, ripgrep 
 - a [patched font](https://www.nerdfonts.com/), else icons won't render
 
-## Setup
+## Setup - General
 - clone repo to `$HOME`
     * `cd $HOME`
     * `git init`
@@ -25,17 +25,15 @@ A collection of configurations for my systems
 - in neovim:
     * `:Mason install stylua prettier prettierd`
 
-## Windows config
+## Setup - Windows
+- install [wslu](https://wslutiliti.es/wslu/install.html)
 - alacritty
     * ensure `~/.local/bin` is in your PATH
-    * `alacopy2win.sh <username>` with your windows username
+    * `alacopy2win.sh` to copy alacritty.toml to the required windows location
+        * run this after each update to alacritty.toml
     * see `alacopy2win.sh -h` for more info
 
 ## TODO
-- find a way to symlink %APPDATA%/alacritty/ to alacritty/
-- separate windows config from unix config
-- remove nvim.old after grabbing wanted config (in progress)
 - create a global colors file
     * automation :3
-- uhhh, refine this doc???
 

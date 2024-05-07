@@ -17,6 +17,7 @@ alias l="ls -hAl"
 alias clip="xclip -r -selection c"
 alias nv="nvim"
 
-# windows only
-alias cdw="cd /mnt/c/Users/bbdnet2840/"
+# WINDOWS ONLY start
+alias cdw="cd /mnt/c/Users/$(wslvar USERNAME)/"
+# WINDOWS ONLY end 
 

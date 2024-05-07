@@ -1,6 +1,9 @@
+# WINDOWS ONLY start
 [shell]
     program = "wsl.exe"
     args = ["--cd", "~"]
+
+# WINDOWS ONLY end 
 
 [window]
     title = "psst... you look nice today ♥"
