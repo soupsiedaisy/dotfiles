@@ -26,7 +26,7 @@ A collection of configurations for my systems
     * add `ZDOTDIR=~/.config/zsh` to `/etc/zsh/zshenv` or `~/.zshenv` (create if doesn't exist)
     * `mkdir ~/.cache/zsh` 
 - in neovim:
-    * `:Mason install stylua prettier prettierd`
+    * `:MasonInstall stylua prettier prettierd`
 
 ## Setup - Windows
 - install [wslu](https://wslutiliti.es/wslu/install.html)
