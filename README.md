@@ -8,6 +8,7 @@ A collection of configurations for my systems
 - zsh
 - neofetch
 - tree
+- npm (nvm recommended)
 - neovim
     * if not using pacman, checkout [neovim's install instructions](https://github.com/neovim/neovim/blob/master/INSTALL.md#linux), because apt doesn't install latest version???
 - neovim plugin deps: cmake, zip, unzip, curl, tar, gzip, ripgrep 
