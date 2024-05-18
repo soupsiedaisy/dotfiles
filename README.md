@@ -21,7 +21,9 @@ A collection of configurations for my systems
     * `git pull origin main --allow-unrelated-histories`
     * `git branch -u origin/main main`
 - init submodules with `git submodule update --init --recursive`
-- add `ZDOTDIR=~/.config/zsh` to `/etc/zsh/zshenv` or `~/.zshenv` (create if doesn't exist)
+- zsh
+    * add `ZDOTDIR=~/.config/zsh` to `/etc/zsh/zshenv` or `~/.zshenv` (create if doesn't exist)
+    * `mkdir ~/.cache/zsh` 
 - in neovim:
     * `:Mason install stylua prettier prettierd`
 
