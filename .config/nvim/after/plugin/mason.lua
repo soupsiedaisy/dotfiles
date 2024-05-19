@@ -25,10 +25,6 @@ local on_attach = function(_, bufnr)
     nmap('gI', '[G]oto [I]mplementation', require('telescope.builtin').lsp_implementations)
     nmap('K', 'Hover Documentation', vim.lsp.buf.hover)
     nmap('<C-k>', 'Signature Documentation', vim.lsp.buf.signature_help)
-
-    vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
-        vim.lsp.buf.format()
-    end, { desc = 'Format current buffer with LSP' })
 end
 
 require('mason').setup()

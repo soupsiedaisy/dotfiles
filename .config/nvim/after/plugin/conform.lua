@@ -3,6 +3,7 @@ require('conform').setup({
         lua = { 'stylua' },
         javascript = { { 'prettierd', 'prettier' } },
         json = { { 'prettierd', 'prettier' } },
+        markdown = { 'markdownlint' }
     },
 
     -- format_on_save = { timeout_ms = 500, lsp_fallback = true },
