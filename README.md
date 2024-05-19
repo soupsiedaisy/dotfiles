@@ -6,6 +6,7 @@ A collection of configurations for my systems
 ## Requirements
 - make 
 - zsh
+- alacritty
 - neofetch
 - tree
 - npm (nvm recommended)
@@ -26,7 +27,7 @@ A collection of configurations for my systems
     * add `ZDOTDIR=~/.config/zsh` to `/etc/zsh/zshenv` or `~/.zshenv` (create if doesn't exist)
     * `mkdir ~/.cache/zsh` 
 - in neovim:
-    * `:MasonInstall stylua prettier prettierd`
+    * `:MasonInstall stylua prettier prettierd markdownlint`
 
 ## Setup - Windows
 - install [wslu](https://wslutiliti.es/wslu/install.html)
@@ -36,7 +37,22 @@ A collection of configurations for my systems
         * run this after each update to alacritty.toml
     * see `alacopy2win.sh -h` for more info
 
+## GNOME stuff
+- Extensions
+        * get `gnome-browser-connector` package and 'GNOME Shell integration' browser extension
+    * [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
+    * [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/)
+    * [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/)
+- Packages
+    <!-- TODO -->
+    * vlc
+    * copyq
+    * blueman
+- Appearance
+    * [Tela Circle Icons](https://github.com/vinceliuice/Tela-circle-icon-theme)
+    
 ## TODO
+- add icons to dotfiles
 - create a global colors file
     * automation :3
 
