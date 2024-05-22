@@ -11,11 +11,13 @@ alias srcz="clear && source $ZDOTDIR/.zshrc"
 alias gits="git status"
 alias gitd="git diff"
 alias gitg="git log --graph --all"
+alias gitc="git commit -m"
 
 # misc
 alias l="ls -hAl"
 alias clip="xclip -r -selection c"
 alias nv="nvim"
+alias apt_refresh="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean"
 
 # WINDOWS ONLY start
 alias cdw="cd /mnt/c/Users/$(wslvar USERNAME)/"
