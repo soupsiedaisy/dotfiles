@@ -43,6 +43,8 @@ local servers = {
         },
     },
     tsserver = {},
+    taplo = {},
+    omnisharp = {},
 }
 
 require('neodev').setup()
