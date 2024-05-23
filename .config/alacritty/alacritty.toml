@@ -58,3 +58,8 @@
     # white = "#"
     # Default: "#8e8e8e"
 
+[keyboard]
+    bindings = [
+        { key = "Space", mods = "Control", action = "None" },
+    ]
+
