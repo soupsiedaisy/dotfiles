@@ -17,6 +17,7 @@ README.md
 !/.config/zsh
 !/.config/nvim
 !/.config/alacritty
+!/.config/kitty
 !/.local/bin
 !/.local/share
 
