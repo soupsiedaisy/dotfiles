@@ -4,6 +4,10 @@ vim.keymap.set({ 't', 'i', 'n' }, '<A-j>', '<C-\\><C-N><C-w>j', { noremap = true
 vim.keymap.set({ 't', 'i', 'n' }, '<A-k>', '<C-\\><C-N><C-w>k', { noremap = true, desc = 'Go to the up window' })
 vim.keymap.set({ 't', 'i', 'n' }, '<A-l>', '<C-\\><C-N><C-w>l', { noremap = true, desc = 'Go to the right window' })
 
+-- ALT+{t,T} to navigate tabs in any mode
+vim.keymap.set({ 't', 'i', 'n', 'v' }, '<A-t>', '<C-\\><C-N>gt', { noremap = true, desc = 'Go to the next tab' })
+vim.keymap.set({ 't', 'i', 'n', 'v' }, '<A-T>', '<C-\\><C-N>gT', { noremap = true, desc = 'Go to the previous tab' })
+
 -- ALT+` {`,t,h,j,k,l} to open terminal
 vim.keymap.set('n', '<A-`>`', vim.cmd.terminal, { noremap = true, desc = 'Terminal: new terminal in current buffer' })
 vim.keymap.set('n', '<A-`>t', ':tabnew +terminal<CR>', { noremap = true, desc = 'Terminal: new terminal in new tab' })
@@ -11,7 +15,3 @@ vim.keymap.set('n', '<A-`>h', ':vertical leftabove terminal<CR>', { noremap = tr
 vim.keymap.set('n', '<A-`>j', ':rightbelow terminal<CR>', { noremap = true, desc = 'Terminal: new terminal downwards' })
 vim.keymap.set('n', '<A-`>k', ':leftabove terminal<CR>', { noremap = true, desc = 'Terminal: new terminal upwards' })
 vim.keymap.set('n', '<A-`>l', ':vertical rightbelow terminal<CR>', { noremap = true, desc = 'Terminal: new terminal to the right' })
-
--- ALT+{t,T} to navigate tabs in any mode
-vim.keymap.set({ 't', 'i', 'n', 'v' }, '<A-`>t', ':tabnext<CR>', { noremap = true, desc = 'Go to the next tab' })
-vim.keymap.set({ 't', 'i', 'n', 'v' }, '<A-`>T', ':tabprev<CR>', { noremap = true, desc = 'Go to the previous tab' })
