@@ -14,4 +14,4 @@ vim.keymap.set('n', '<A-`>l', ':vertical rightbelow terminal<CR>', { noremap = t
 
 -- ALT+{t,T} to navigate tabs in any mode
 vim.keymap.set({ 't', 'i', 'n', 'v' }, '<A-`>t', ':tabnext<CR>', { noremap = true, desc = 'Go to the next tab' })
-vim.keymap.set({ 't', 'i', 'n', 'v' }, '<A-`>t', ':tabprev<CR>', { noremap = true, desc = 'Go to the previous tab' })
+vim.keymap.set({ 't', 'i', 'n', 'v' }, '<A-`>T', ':tabprev<CR>', { noremap = true, desc = 'Go to the previous tab' })
