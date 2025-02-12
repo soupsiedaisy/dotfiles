@@ -20,3 +20,7 @@ alias clip="xclip -r -selection c"
 alias nv="nvim"
 alias apt_refresh="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean"
 
+# WINDOWS ONLY start
+alias cdw="cd /mnt/c/Users/$(wslvar USERNAME)/"
+# WINDOWS ONLY end 
+
