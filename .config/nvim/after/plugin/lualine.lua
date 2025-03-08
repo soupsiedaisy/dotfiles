@@ -1,11 +1,11 @@
-require('lualine').setup {
+require('lualine').setup({
     options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'catppuccin',
         component_separators = '|',
-        section_separators = ''
+        section_separators = '',
     },
     sections = {
-        lualine_c = { "vim.fn.expand('%')" }
-    }
-};
+        lualine_c = { "vim.fn.expand('%')" },
+    },
+})
