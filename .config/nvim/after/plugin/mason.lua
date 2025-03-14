@@ -41,6 +41,7 @@ local servers = {
     ts_ls = {},
     taplo = {},
     omnisharp = {},
+    somesass_ls = {},
 }
 
 require('neodev').setup()
