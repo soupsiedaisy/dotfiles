@@ -2,7 +2,7 @@ return {
     'EdenEast/nightfox.nvim',
     priority = 1000,
     config = function()
-        vim.cmd.colorscheme('duskfox')
+        -- vim.cmd.colorscheme('duskfox')
         -- carbonfox
         -- dawnfox
         -- dayfox
