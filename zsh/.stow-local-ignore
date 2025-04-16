@@ -1,0 +1,4 @@
+\.zcompdump
+.*/zsh-syntax-highlighting/.*
+.*/zsh-vi-mode/.*
+
