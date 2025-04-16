@@ -4,11 +4,13 @@
 
 A collection of configurations for my systems
 
-## Requirements
+## Dependencies
 
 - make
 - zsh
 - alacritty
+- kitty
+- tmux
 - neofetch
 - tree
 - npm (nvm recommended)
@@ -19,16 +21,14 @@ A collection of configurations for my systems
 
 ## Setup - General
 
-- clone repo to `$HOME`
-  - `cd $HOME`
-  - `git init`
-  - `git remote add origin git@github.com:soupsiedaisy/dotfiles.git`
-  - `git pull origin main --allow-unrelated-histories`
-  - `git branch -u origin/main main`
+- clone repo to `$HOME/.dotfiles` (any immediate subdir of home will do)
 - init submodules with `git submodule update --init --recursive`
+- `./stow-dotfiles.sh` to stow files 
 - zsh
-  - add `ZDOTDIR=~/.config/zsh` to `/etc/zsh/zshenv` or `~/.zshenv` (create if doesn't exist)
+  - add `ZDOTDIR=~/.config/zsh` to `/etc/zsh/zshenv` or `~/.zshenv`
   - `mkdir ~/.cache/zsh`
+- tmux
+  - attach a client and run `<prefix>I` to install plugins
 - in neovim:
   - `:MasonInstall stylua prettier prettierd markdownlint`
 
@@ -59,5 +59,3 @@ A collection of configurations for my systems
 ## TODO
 
 - add icons to dotfiles
-- create a global colors file
-  - automation :3
