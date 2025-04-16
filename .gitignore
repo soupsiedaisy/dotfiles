@@ -2,3 +2,6 @@
 lazy-lock.json
 *.uuid
 
+/tmux/.config/tmux/plugins/*
+!/tmux/.config/tmux/plugins/tpm
+
