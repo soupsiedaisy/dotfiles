@@ -112,8 +112,8 @@ zle -N down-line-or-beginning-search
 zvm_bindkey vicmd "k" up-line-or-beginning-search
 zvm_bindkey vicmd "j" down-line-or-beginning-search
 
-# neofetch on zsh open
-neofetch
+# hyfetch on zsh open
+hyfetch
 
 # remove beeps (unreliant)
 unsetopt BEEP
