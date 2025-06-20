@@ -34,7 +34,16 @@ local servers = {
     eslint = {},
     lua_ls = {
         Lua = {
-            workspace = { checkThirdParty = false },
+            workspace = {
+                checkThirdParty = false,
+                library = vim.api.nvim_get_runtime_file('', true),
+            },
+            diagnostics = {
+                globals = {
+                    'vim',
+                    'require',
+                },
+            },
             telemetry = { enable = false },
         },
     },
@@ -53,15 +62,14 @@ local mason_lspconfig = require('mason-lspconfig')
 
 mason_lspconfig.setup({
     ensure_installed = vim.tbl_keys(servers),
+    automatic_enable = true,
 })
 
-mason_lspconfig.setup({
-    function(server_name)
-        require('lspconfig')[server_name].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-            settings = servers[server_name],
-            filetypes = (servers[server_name] or {}).filetypes,
-        })
-    end,
-})
+for server in pairs(servers) do
+    vim.lsp.config(server, {
+        settings = servers[server],
+        capabilities = capabilities,
+        on_attach = on_attach,
+        filetypes = (servers[server] or {}).filetypes,
+    })
+end
