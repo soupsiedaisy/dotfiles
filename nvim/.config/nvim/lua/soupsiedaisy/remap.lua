@@ -8,10 +8,12 @@ vim.keymap.set({ 't', 'i', 'n' }, '<A-l>', '<C-\\><C-N><C-w>l', { noremap = true
 vim.keymap.set({ 't', 'i', 'n', 'v' }, '<A-t>', '<C-\\><C-N>gt', { noremap = true, desc = 'Go to the next tab' })
 vim.keymap.set({ 't', 'i', 'n', 'v' }, '<A-T>', '<C-\\><C-N>gT', { noremap = true, desc = 'Go to the previous tab' })
 
--- ALT+` {`,t,h,j,k,l} to open terminal
-vim.keymap.set('n', '<A-`>`', vim.cmd.terminal, { noremap = true, desc = 'Terminal: new terminal in current buffer' })
-vim.keymap.set('n', '<A-`>t', ':tabnew +terminal<CR>', { noremap = true, desc = 'Terminal: new terminal in new tab' })
-vim.keymap.set('n', '<A-`>h', ':vertical leftabove terminal<CR>', { noremap = true, desc = 'Terminal: new terminal to the left' })
-vim.keymap.set('n', '<A-`>j', ':rightbelow terminal<CR>', { noremap = true, desc = 'Terminal: new terminal downwards' })
-vim.keymap.set('n', '<A-`>k', ':leftabove terminal<CR>', { noremap = true, desc = 'Terminal: new terminal upwards' })
-vim.keymap.set('n', '<A-`>l', ':vertical rightbelow terminal<CR>', { noremap = true, desc = 'Terminal: new terminal to the right' })
+-- <leader>` {`,t,h,j,k,l} to open terminal
+vim.keymap.set('n', '<leader>``', vim.cmd.terminal, { noremap = true, desc = 'Terminal: new terminal in current buffer' })
+vim.keymap.set('n', '<leader>`t', ':tabnew +terminal<CR>', { noremap = true, desc = 'Terminal: new terminal in new tab' })
+vim.keymap.set('n', '<leader>`h', ':vertical leftabove terminal<CR>', { noremap = true, desc = 'Terminal: new terminal to the left' })
+vim.keymap.set('n', '<leader>`j', ':rightbelow terminal<CR>', { noremap = true, desc = 'Terminal: new terminal downwards' })
+vim.keymap.set('n', '<leader>`k', ':leftabove terminal<CR>', { noremap = true, desc = 'Terminal: new terminal upwards' })
+vim.keymap.set('n', '<leader>`l', ':vertical rightbelow terminal<CR>', { noremap = true, desc = 'Terminal: new terminal to the right' })
+
+vim.keymap.set('n', '<leader>xh', vim.diagnostic.open_float, { noremap = true, desc = 'Diagnostic: open float' })
