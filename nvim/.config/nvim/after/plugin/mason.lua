@@ -31,7 +31,6 @@ require('mason').setup()
 require('mason-lspconfig').setup()
 
 local servers = {
-    eslint = {},
     lua_ls = {
         Lua = {
             workspace = {
@@ -51,6 +50,11 @@ local servers = {
     taplo = {},
     omnisharp = {},
     somesass_ls = {},
+    eslint = {},
+    harper_ls = {},
+    html = {},
+    jsonls = {},
+    pylsp = {},
 }
 
 require('neodev').setup()
