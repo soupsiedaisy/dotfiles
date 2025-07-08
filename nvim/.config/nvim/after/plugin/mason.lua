@@ -35,7 +35,6 @@ local servers = {
         Lua = {
             workspace = {
                 checkThirdParty = false,
-                library = vim.api.nvim_get_runtime_file('', true),
             },
             diagnostics = {
                 globals = {
@@ -56,8 +55,6 @@ local servers = {
     jsonls = {},
     pylsp = {},
 }
-
-require('neodev').setup()
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
