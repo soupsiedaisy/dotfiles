@@ -66,6 +66,6 @@ require('gitsigns').setup({
         map('n', '<leader>hD', diff_last_commit, { desc = 'Git diff against last commit (gitsigns)' })
         map('n', '<leader>htb', gs.toggle_current_line_blame, { desc = 'Git toggle blame line (gitsigns)' })
         map('n', '<leader>htd', gs.toggle_deleted, { desc = 'Git toggle show deleted (gitsigns)' })
-        map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>', { desc = 'Git select hunk (gitsigns)' })
+        map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>', { desc = 'Git inner hunk (gitsigns)' })
     end,
 })
