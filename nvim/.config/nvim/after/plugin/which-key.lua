@@ -9,6 +9,7 @@ require('which-key').add({
     { '<leader>l', group = 'LSP', icon = { cat = 'filetype', name = 'lua' } },
     { '<leader>lw', group = 'Workspace' },
     { '<leader>h', group = 'Hunk', icon = { cat = 'extension', name = 'git' } },
+    { '<leader>r', group = 'Resession' },
     { '<leader>s', group = 'Search', icon = { desc = 'telescope' } },
     { '<leader>x', group = 'Diagnostics' },
     { '<leader>`', group = 'Terminal' },
