@@ -17,3 +17,5 @@ vim.keymap.set('n', '<leader>`k', ':leftabove terminal<CR>', { noremap = true, d
 vim.keymap.set('n', '<leader>`l', ':vertical rightbelow terminal<CR>', { noremap = true, desc = 'Terminal: new terminal to the right' })
 
 vim.keymap.set('n', '<leader>xh', vim.diagnostic.open_float, { noremap = true, desc = 'Diagnostic: open float' })
+
+vim.keymap.set({ 'x', 'n' }, ',p', '"0p', { noremap = true, desc = 'Paste last yanked below' })
