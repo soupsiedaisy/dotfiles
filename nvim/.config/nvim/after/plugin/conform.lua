@@ -1,17 +1,18 @@
-local prettier = { 'prettierd', 'prettier', stop_after_first = true }
+local conform = require('conform')
+local common = { 'eslint_d', 'prettierd', 'prettier', stop_after_first = true }
 
-require('conform').setup({
+conform.setup({
     formatters_by_ft = {
         lua = { 'stylua' },
-        javascript = prettier,
-        typescript = prettier,
-        javascriptreact = prettier,
-        typescriptreact = prettier,
-        css = prettier,
-        html = prettier,
-        json = prettier,
-        yaml = prettier,
-        graphql = prettier,
+        javascript = common,
+        typescript = common,
+        javascriptreact = common,
+        typescriptreact = common,
+        css = common,
+        html = common,
+        json = common,
+        yaml = common,
+        graphql = common,
         markdown = { 'markdownlint' },
     },
 
@@ -25,5 +26,5 @@ require('conform').setup({
 })
 
 vim.keymap.set('n', '<leader>f', function()
-    require('conform').format({ async = true, lsp_fallback = true })
+    conform.format({ async = true, lsp_fallback = true })
 end, { desc = 'Format buffer' })
