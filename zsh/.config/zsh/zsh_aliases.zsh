@@ -3,20 +3,20 @@ alias ls="ls --color=auto"
 alias tree="tree -C"
 alias pacman="pacman --color auto"
 
-# zdotdir
-alias cdz="cd $ZDOTDIR"
-alias srcz="clear && source $ZDOTDIR/.zshrc"
-
-# git
 alias gits="git status"
 alias gitd="git diff"
 alias gitds="git diff --staged"
 alias gitg="git log --graph --all"
 alias gitc="git commit -m"
 
-# misc
-alias l="ls -hAl"
-alias clip="xclip -r -selection c"
-alias nv="nvim"
-alias apt_refresh="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean"
+alias l="ls"
+alias la="ls -A"
+alias ll="ls -hAl"
 
+alias snv="sudo nvim"
+alias nv="nvim"
+alias nv.="nvim ~/.dotfiles/"
+
+alias cd.="cd ~/.dotfiles/"
+
+alias clip="xclip -r -selection c"
