@@ -8,34 +8,35 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_perl_provider = 0
 
 -- line numbers
-vim.opt.number = true
-vim.opt.relativenumber = true
+vim.o.number = true
+vim.o.relativenumber = true
 
 -- tabs and indents (does this still need to be here?)
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.smartindent = true
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+vim.o.smartindent = true
 
 -- window
-vim.opt.winminwidth = 10
-vim.opt.winwidth = 30
-vim.opt.splitright = true
+vim.o.winminwidth = 10
+vim.o.winwidth = 30
+vim.o.splitright = true
 
 -- searching
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.tagcase = 'followscs'
+vim.o.hlsearch = false
+vim.o.incsearch = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.tagcase = 'followscs'
 
 -- undo history
-vim.opt.undodir = os.getenv('HOME') .. '/.cache/nvim/undodir'
-vim.opt.undofile = true
+vim.o.undodir = os.getenv('HOME') .. '/.cache/nvim/undodir'
+vim.o.undofile = true
 
 -- misc
-vim.opt.mouse = 'a'
-vim.opt.scrolloff = 4
-vim.opt.termguicolors = true
-vim.opt.wrap = false
+vim.o.mouse = 'a'
+vim.o.scrolloff = 4
+vim.o.termguicolors = true
+vim.o.wrap = false
+vim.o.foldlevelstart = 999
