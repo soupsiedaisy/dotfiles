@@ -2,14 +2,34 @@ require('nvim-tree').setup({
     view = {
         number = true,
         relativenumber = true,
-        side = 'right',
-        width = {
-            min = 20,
-            max = function()
-                return math.floor(vim.o.columns / 3)
+        centralize_selection = true,
+        float = {
+            enable = true,
+            open_win_config = function()
+                local columns = vim.o.columns
+                local lines = vim.o.lines
+                local divisor = 4
+
+                return {
+                    relative = 'editor',
+                    border = 'rounded',
+                    width = math.floor(columns / divisor),
+                    height = lines > 10 and lines - 7 or lines,
+                    row = 1,
+                    col = math.floor(columns * (divisor - 1) / divisor),
+                    title = {
+                        { ' nvim-tree ', 'FloatBorder' },
+                    },
+                    title_pos = 'center',
+                }
             end,
-            padding = 1,
         },
+    },
+    diagnostics = {
+        enable = true,
+        severity = {
+            min = vim.diagnostic.severity.WARN
+        }
     },
     update_focused_file = {
         enable = true,
