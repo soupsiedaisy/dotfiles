@@ -15,7 +15,7 @@ require('nvim-tree').setup({
                     border = 'rounded',
                     width = math.floor(columns / divisor),
                     height = lines > 10 and lines - 7 or lines,
-                    row = 1,
+                    row = 2,
                     col = math.floor(columns * (divisor - 1) / divisor),
                     title = {
                         { ' nvim-tree ', 'FloatBorder' },
