@@ -1,0 +1,11 @@
+!**/.config/
+!**/.local/
+!**/.stow*
+
+!zsh/.config/zsh/.dircolors
+!zsh/.config/zsh/.zshrc
+
+zsh/.config/zsh/plugins/zsh-syntax-highlighting/**
+zsh/.config/zsh/plugins/zsh-vi-mode/**
+
+tmux/.config/tmux/plugins/
